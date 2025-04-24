@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrodomésticos para el Hogar | Hicel S.A.S</title>
+    <meta name="description" content="comprar electrodomésticos Colombia,precios neveras lavadoras, tienda electrodomésticos online en Hicel S.A.S">
+    <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" alt="logo de Hicel S.A.S"/>
+            <h1>Hicel S.A.S</h1>
+        </div>
+        <div class="barra-de-busqueda-header">
+            <input type="text" id="campo-busqueda-header" placeholder="Buscar productos...">
+            <button id="boton-buscar-header">Buscar</button></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="resultados-busqueda">
+        </section>
+        <section class="hero">
+            <img src="img/imagen-principal.jpg" alt="Imagen de inicio" class="imagen-inicio">
+            <div>
+                <h2>Encuentra los mejores electrodomésticos para tu hogar</h2>
+                <p>Calidad y variedad en un solo lugar.</p>
+                <a href="productos.html" class="button">Ver nuestros productos</a>
+            </div>
+        </section>
+
+        <section class="categories">
+            </section>
+
+        <section class="about-us-brief">
+            </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Hicel S.A.S.</p>
+        <div class="contact-info">
+            <p>Telefono: 601 3423642</p>
+            <p>Email: mundialkra13@hotmail.com</p>
+            <p>Dirección: carrera 13 # 15-59</p>
+        </div>
+    </footer>
+
+    <script>
+        const productos = [
+            { nombre: "Nevera LG No Frost", marca: "LG", descripcion: "VT34KPM proporciona frescura de manera uniforme y rapida gracias a su tecnologia Cooling.", precio: 2200000 },
+            { nombre: "Lavadora Mabe Automática", marca: "MABE", descripcion: "Lavadora con múltiples ciclos de lavado.", precio: 850000 },
+            { nombre: "Televisor LG Smart TV", marca: "LG", descripcion: "Televisor LED con resolución 4K 50 pulgadas.", precio: 1750000 },
+            { nombre: "Estufa a Gas Abba", marca: "ABBA", descripcion: "Estufa de 4 quemadores con horno.", precio: 900000 },
+            // Agrega aquí la información de todos tus productos
+        ];
+    
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchButton = document.getElementById('boton-buscar-header');
+            const searchTermInput = document.getElementById('campo-busqueda-header');
+            const resultadosBusqueda = document.getElementById('resultados-busqueda');
+    
+            if (searchButton) {
+                searchButton.addEventListener('click', function(event) {
+                    event.preventDefault(); // Evita la recarga de la página
+    
+                    console.log("¡Botón de búsqueda clickeado!"); // NUEVO: Verifica si el botón se clickea
+                    const searchTerm = searchTermInput.value.toLowerCase(); // Convertir a minúsculas para comparar
+                    console.log("Término de búsqueda:", searchTerm); // NUEVO: Muestra el término de búsqueda
+    
+                    const resultados = productos.filter(producto =>
+                        producto.nombre.toLowerCase().includes(searchTerm) ||
+                        producto.descripcion.toLowerCase().includes(searchTerm) ||
+                        producto.marca.toLowerCase().includes(searchTerm)
+                    );
+    
+                    mostrarResultados(resultados);
+                });
+            } else {
+                console.error("¡Error! El botón de búsqueda no se encontró.");
+            }
+    
+            function mostrarResultados(resultados) {
+                console.log("Función mostrarResultados llamada con:", resultados); // NUEVO: Verifica si la función se llama
+                if (!resultadosBusqueda) {
+                    console.error("Elemento #resultados-busqueda no encontrado"); // NUEVO: Verifica si el elemento existe
+                    return;
+                }
+    
+                resultadosBusqueda.innerHTML = ''; // Limpia resultados anteriores
+    
+                if (resultados && resultados.length > 0) {
+                    const listaResultados = document.createElement('ul');
+                    resultados.forEach(producto => {
+                        const itemResultado = document.createElement('li');
+                        itemResultado.innerHTML = `
+                        <a class="filtro" href="${producto.nombre.replace(/ /g, '-').toLowerCase()}.html">
+
+                            <span class="resultado-nombre">${producto.nombre}</span>
+                            <span class="resultado-marca">(${producto.marca})</span>
+                            <span class="resultado-descripcion">${producto.descripcion}</span>
+                            <span class="resultado-precio">\$${producto.precio}</span>
+                        </a>
+                        `;
+                        listaResultados.appendChild(itemResultado);
+                    });
+                    resultadosBusqueda.appendChild(listaResultados);
+                } else {
+                    resultadosBusqueda.textContent = "No se encontraron resultados.";
+                }
+            }
+        });
+    </script>
