@@ -1,0 +1,50 @@
+.product-card {
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .product-card p:first-of-type {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .img-product {
+    width: 200px;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 1rem;
+    margin: 1rem 0;
+    transition: transform 0.3s ease;
+  }
+  
+  .img-product:hover {
+    transform: scale(1.02);
+  }
+  
+  .button {
+    background-color: #2e7d32;
+    color: white;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    font-weight: bold;
+    margin-top: 1.5rem;
+    white-space: pre-line; /* mantiene saltos de línea si los hay */
+  }
+  
+  @media (max-width: 768px) {
+    .product-card {
+      padding: 1rem;
+    }
+  
+    .img-product {
+      max-height: 250px;
+    }
+  }
+  

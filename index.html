@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/styles.css"/>
 </head>
 <body>
-    <header>
+    <header> 
         <div class="logo">
             <img src="img/logo.png" alt="logo de Hicel S.A.S"/>
             <h1>Hicel S.A.S</h1>
@@ -56,11 +56,34 @@
 
     <script>
         const productos = [
-            { nombre: "Nevera LG No Frost", marca: "LG", descripcion: "VT34KPM proporciona frescura de manera uniforme y rapida gracias a su tecnologia Cooling.", precio: 2200000 },
-            { nombre: "Lavadora Mabe Automática", marca: "MABE", descripcion: "Lavadora con múltiples ciclos de lavado.", precio: 850000 },
-            { nombre: "Televisor LG Smart TV", marca: "LG", descripcion: "Televisor LED con resolución 4K 50 pulgadas.", precio: 1750000 },
-            { nombre: "Estufa a Gas Abba", marca: "ABBA", descripcion: "Estufa de 4 quemadores con horno.", precio: 900000 },
-            // Agrega aquí la información de todos tus productos
+            { nombre: "Nevera LG 334 litros VT34KPM", marca: "LG", descripcion: "Proporciona frescura de manera uniforme y rápida gracias a su tecnología Cooling.", precio: 2200000 },
+            { nombre: "Nevera LG 420 litros GB41WPP", marca: "LG", descripcion: "Nevera Bottom Freezer de gran capacidad tipo Europeo con diseño sofisticado.", precio: 2500000 },
+            { nombre: "Nevera MABE 230 litros RMA247PJCG", marca: "MABE", descripcion: "Ahorra hasta un 56% de energía con el compresor Eco Advance y gas refrigerante R600.", precio: 1800000 },
+            { nombre: "Nevera MABE 394 litros RMP421FYCU", marca: "MABE", descripcion: "Tecnología Home Energy Saver que permite ahorrar hasta 67% de energía.", precio: 2700000 },
+            { nombre: "Nevera WHIRLPOOL 518 litros WD1610S", marca: "WHIRLPOOL", descripcion: "Eficiente energéticamente, preserva alimentos hasta por 15 días.", precio: 3000000 },
+            { nombre: "Nevera WHIRLPOOL 234 litros WRW22CKTW", marca: "WHIRLPOOL", descripcion: "Mayor conservación de alimentos gracias a su tecnología avanzada.", precio: 1500000 },
+            { nombre: "Nevera CHALLENGER 231 litros CR249", marca: "CHALLENGER", descripcion: "Diseño moderno y elegante con mayor espacio interno.", precio: 1400000 },
+            { nombre: "Nevera CHALLENGER 300 litros CR317", marca: "CHALLENGER", descripcion: "Diseño moderno y elegante con mayor espacio interno.", precio: 1600000 },
+            { nombre: "Lavadora LG 46 Libras WT21MV6", marca: "LG", descripcion: "Carga superior con Inteligencia Artificial y función TurboWash.", precio: 2200000 },
+            { nombre: "Lavadora LG 42 Libras WT19MV6", marca: "LG", descripcion: "Carga superior con filtro atrapa pelusas y motor Inverter Direct Drive.", precio: 2000000 },
+            { nombre: "Lavadora MABE 31 Libras LMA4120WDGABO", marca: "MABE", descripcion: "Carga superior con 9 ciclos automáticos e inicio programado.", precio: 1200000 },
+            { nombre: "Lavadora MABE 40 Libras LMA8120WDGABO", marca: "MABE", descripcion: "Carga superior con motor Inverter y tecnología Safe & Clean.", precio: 1800000 },
+            { nombre: "Lavadora WHIRLPOOL 44 Libras WW20LTAHLA", marca: "WHIRLPOOL", descripcion: "Carga superior con tecnología Smart Action y 11 ciclos.", precio: 2500000 },
+            { nombre: "Lavadora WHIRLPOOL 56 Libras 8MWTWLA41WJG", marca: "WHIRLPOOL", descripcion: "Carga superior con Xpert System y 8 ciclos automáticos.", precio: 2800000 },
+            { nombre: "Lavadora CHALLENGER 26 Libras WWI12ASHLS", marca: "CHALLENGER", descripcion: "Carga superior con sistema de lavado Impeller y tina de acero inoxidable.", precio: 1300000 },
+            { nombre: "Lavadora CHALLENGER 22 Libras WWI10ASHLS", marca: "CHALLENGER", descripcion: "Carga superior con diseño práctico y 8 niveles de agua.", precio: 1100000 },
+            { nombre: "Televisor LG 50 pulgadas 50UT8050", marca: "LG", descripcion: "Pantalla de 50 pulgadas con resolución 4K y sistema operativo webOS.", precio: 1750000 },
+            { nombre: "Televisor LG 70 pulgadas 70NANO80", marca: "LG", descripcion: "Imágenes con colores puros y procesador Alpha 5 Gen 7.", precio: 3500000 },
+            { nombre: "Televisor CHALLENGER 50 pulgadas 50KG85", marca: "CHALLENGER", descripcion: "Pantalla amplia con colores y detalles nítidos.", precio: 1500000 },
+            { nombre: "Televisor CHALLENGER 65 pulgadas 65KG85", marca: "CHALLENGER", descripcion: "Pantalla impresionante con calidad de imagen 4K.", precio: 2500000 },
+            { nombre: "Estufa MABE 50 centímetros TX1G-6CON", marca: "MABE", descripcion: "Versatilidad con quemador jumbo y diseño ideal para el hogar.", precio: 900000 },
+            { nombre: "Estufa MABE 76 centímetros EMC30KXX", marca: "MABE", descripcion: "Diseño ideal con quemadores jumbo y recubrimiento Easy Clean.", precio: 1200000 },
+            { nombre: "Estufa INDURAMA 60 centímetros FLORENCIA", marca: "INDURAMA", descripcion: "Acabado gris con 4 quemadores y horno con doble vidrio.", precio: 1400000 },
+            { nombre: "Estufa INDURAMA 76 centímetros ROMA", marca: "INDURAMA", descripcion: "76 centímetros con 5 quemadores sellados y grill a gas.", precio: 1600000 },
+            { nombre: "Estufa ABBA 50 centímetros AG201-5", marca: "ABBA", descripcion: "Vidrio templado con horno a gas y gratinador eléctrico.", precio: 1000000 },
+            { nombre: "Estufa ABBA 71 centímetros RG803-3", marca: "ABBA", descripcion: "Vidrio templado con 6 puestos y horno con bombillo interno.", precio: 1500000 },
+            { nombre: "Estufa SUPERIOR 50 centímetros S-7004-TITANIUM", marca: "SUPERIOR", descripcion: "Cubierta de acero inoxidable con grill eléctrico.", precio: 1100000 },
+            { nombre: "Estufa SUPERIOR 50 centímetros S-7003", marca: "SUPERIOR", descripcion: "Cubierta de acero inoxidable con 3 quemadores semi-rápidos.", precio: 1000000 }
         ];
     
         document.addEventListener('DOMContentLoaded', function() {
@@ -119,3 +142,4 @@
             }
         });
     </script>
+</html>
